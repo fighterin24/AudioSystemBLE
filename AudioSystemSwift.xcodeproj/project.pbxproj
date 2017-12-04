@@ -14,6 +14,7 @@
 		A2DF70011FD497CF0010E490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DF6FFF1FD497CF0010E490 /* LaunchScreen.storyboard */; };
 		A2DF700C1FD497D00010E490 /* AudioSystemSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF700B1FD497D00010E490 /* AudioSystemSwiftTests.swift */; };
 		A2DF70171FD497D00010E490 /* AudioSystemSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF70161FD497D00010E490 /* AudioSystemSwiftUITests.swift */; };
+		A2DF70261FD59B790010E490 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF70251FD59B610010E490 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,10 @@
 		A2DF70121FD497D00010E490 /* AudioSystemSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioSystemSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DF70161FD497D00010E490 /* AudioSystemSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSystemSwiftUITests.swift; sourceTree = "<group>"; };
 		A2DF70181FD497D00010E490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DF70251FD59B610010E490 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A2DF70271FD59C620010E490 /* BlueCapKit-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "BlueCapKit-master"; path = "../../Downloads/BlueCapKit-master"; sourceTree = "<group>"; };
+		A2DF70291FD59E350010E490 /* BlueCapKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BlueCapKit; path = "../../Downloads/BlueCapKit-master/BlueCapKit"; sourceTree = "<group>"; };
+		A2DF702B1FD5A0400010E490 /* BlueCapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BlueCapKit.framework; path = "../../Downloads/iOS-BlueCap-Example-master/SimpleBleCentral/BlueCapKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DF70261FD59B790010E490 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 				A2DF700A1FD497D00010E490 /* AudioSystemSwiftTests */,
 				A2DF70151FD497D00010E490 /* AudioSystemSwiftUITests */,
 				A2DF6FF41FD497CF0010E490 /* Products */,
+				A2DF70241FD59B600010E490 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +130,17 @@
 				A2DF70181FD497D00010E490 /* Info.plist */,
 			);
 			path = AudioSystemSwiftUITests;
+			sourceTree = "<group>";
+		};
+		A2DF70241FD59B600010E490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2DF702B1FD5A0400010E490 /* BlueCapKit.framework */,
+				A2DF70291FD59E350010E490 /* BlueCapKit */,
+				A2DF70271FD59C620010E490 /* BlueCapKit-master */,
+				A2DF70251FD59B610010E490 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +212,11 @@
 					A2DF6FF21FD497CF0010E490 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					A2DF70061FD497D00010E490 = {
 						CreatedOnToolsVersion = 9.2;
@@ -427,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CR64AQDPNW;
 				INFOPLIST_FILE = AudioSystemSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.AudioSystemSwift;
@@ -441,6 +465,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CR64AQDPNW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"(non-recursive)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = AudioSystemSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.AudioSystemSwift;
