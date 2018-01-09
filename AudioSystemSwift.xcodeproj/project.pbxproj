@@ -49,9 +49,6 @@
 		A2DF70161FD497D00010E490 /* AudioSystemSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSystemSwiftUITests.swift; sourceTree = "<group>"; };
 		A2DF70181FD497D00010E490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DF70251FD59B610010E490 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		A2DF70271FD59C620010E490 /* BlueCapKit-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "BlueCapKit-master"; path = "../../Downloads/BlueCapKit-master"; sourceTree = "<group>"; };
-		A2DF70291FD59E350010E490 /* BlueCapKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BlueCapKit; path = "../../Downloads/BlueCapKit-master/BlueCapKit"; sourceTree = "<group>"; };
-		A2DF702B1FD5A0400010E490 /* BlueCapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BlueCapKit.framework; path = "../../Downloads/iOS-BlueCap-Example-master/SimpleBleCentral/BlueCapKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +132,6 @@
 		A2DF70241FD59B600010E490 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A2DF702B1FD5A0400010E490 /* BlueCapKit.framework */,
-				A2DF70291FD59E350010E490 /* BlueCapKit */,
-				A2DF70271FD59C620010E490 /* BlueCapKit-master */,
 				A2DF70251FD59B610010E490 /* CoreBluetooth.framework */,
 			);
 			name = Frameworks;

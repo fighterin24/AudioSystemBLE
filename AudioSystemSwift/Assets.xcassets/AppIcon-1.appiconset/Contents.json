@@ -73,12 +73,13 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "audiosystem.jpeg",
+      "filename" : "audiosystem.JPEG",
       "scale" : "1x"
     },
     {
-      "idiom" : "ipad",
       "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "audiosystem-1.JPEG",
       "scale" : "2x"
     },
     {

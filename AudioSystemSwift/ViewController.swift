@@ -10,6 +10,9 @@ import UIKit
 import CoreBluetooth
 
 class ViewController: UIViewController, CBCentralManagerDelegate {
+    
+    @IBOutlet weak var textfeld: UITextField!
+    
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         var consoleMsg = ""
         switch (central.state) {
@@ -23,6 +26,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate {
         case .unsupported:
             consoleMsg = "BLe unsupported"
             manager.scanForPeripherals(withServices: nil, options: nil)
+            textfeld.text = "unsupported"
             
         case .unauthorized:
             consoleMsg = "BLe unauthorized"
@@ -55,10 +59,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         print("Peripheral: \(peripheral)")
     }
-    
-   
-    
-
 
 }
 
