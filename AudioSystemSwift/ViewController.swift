@@ -38,7 +38,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate {
         }
         
         print("\(consoleMsg)")
-        
+        // test
     }
     
 
